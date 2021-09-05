@@ -2,9 +2,9 @@ import os
 
 def factorial(n):
   """
-  Retorn n!.
-  :param :n int.
-  :return int fatorial de n.
+  Retorna n!
+  :param n: int
+  :return int
   """
   f = 1
   until = int(n)+1
@@ -13,34 +13,31 @@ def factorial(n):
   return f
 
 def clear():
-  """
-  Limpa a tela do terminal
-  """
+  """Limpa a tela do terminal"""
   os.system('cls' if os.name == 'nt' else 'clear')
 
 def banner():
-  """
-  Faz o cabeçalho do programa
-  """
+  """Faz o cabeçalho do programa"""
   f = open('logo.txt')
   logo = f.read()
-  f.close
+  f.close()
   
   print('\033[36m',logo,'\033[m')
 
 def erro(error = 'Digite apenas números!\n'):
   """
   Escreve um erro na tela
+  :param error: str
   """
   print('\n\033[1;31m',error,'\033[m')
 
 def eq_divs(a, b, c, tipo):
   """
   Calcula equações do primeiro grau que contenha divisão
-  :param :a int
-  :param :b int
-  :param :c int
-  :param :tipo str
+  :param a: int
+  :param b: int
+  :param c: int
+  :param tipo: str
   :return int|float
   """
   if tipo == 'a':
@@ -59,10 +56,10 @@ def eq_divs(a, b, c, tipo):
 def eq_mult(a, b, c, tipo):
   """
   Calcula equações do primeiro grau que contenha multiplicação
-  :param :a int
-  :param :b int
-  :param :c int
-  :param :tipo str
+  :param a: int
+  :param b: int
+  :param c: int
+  :param tipo: str
   :return int|float
   """
   if tipo == 'a':
@@ -80,10 +77,10 @@ def eq_mult(a, b, c, tipo):
 def eq_subt(a, b, c, tipo):
   """
   Calcula equações do primeiro grau que contenha subtração
-  :param :a int
-  :param :b int
-  :param :c int
-  :param :tipo str
+  :param a: int
+  :param b: int
+  :param c: int
+  :param tipo: str
   :return int
   """
   if tipo == 'a':
@@ -98,10 +95,10 @@ def eq_subt(a, b, c, tipo):
 def eq_soma(a, b, c, tipo):
   """
   Calcula equações do primeiro grau que contenha soma
-  :param :a int
-  :param :b int
-  :param :c int
-  :param :tipo str
+  :param a: int
+  :param b: int
+  :param c: int
+  :param tipo: str
   :return :int
   """
   if tipo == 'a':
@@ -117,9 +114,9 @@ def eq_soma(a, b, c, tipo):
 def eq_type(a, b, c):
   """
   Retorna onde esta a incógnita da equação
-  :param :a str|int
-  :param :b str|int
-  :param :c str|int
+  :param a: str|int
+  :param b: str|int
+  :param c: str|int
   :return str
   """
   if (a.isdigit() and c.isdigit() and not b.isdigit()):

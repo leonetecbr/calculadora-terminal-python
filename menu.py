@@ -3,7 +3,7 @@ import utils, math, re
 def start(error = ''):
   """
   Inicia o programa e lista as opções
-  :param :error str
+  :param error: str
   """
   utils.clear()
   utils.banner()
@@ -48,7 +48,7 @@ def start(error = ''):
 def operations(c):
   """
   Direciona o usuário para a função desejada
-  :param :c int
+  :param c: int
   """
   if c == 1:
     n = input('Digite o número para fatorar: ')
